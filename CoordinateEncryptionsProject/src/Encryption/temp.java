@@ -1,5 +1,10 @@
 package Encryption;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import graphics.OutputDecryptionPanel;
+import graphics.OutputEncryptionPanel;
+
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
@@ -107,6 +112,18 @@ public class temp {
 //		System.out.println((double)('.')*10+rand);
 //		System.out.println((double)('.')*10+(Math.round(rand * 1e7) / 1e7));
 //		System.out.println(460.232323 % 10);
+//		Double[] check = {31.6783435,34.5810802};
+//	    String chr = "a";
+//	    System.out.println(googleMapsAPI.getChar(check));
+//	    System.out.println(chr.equals(googleMapsAPI.getChar(check)));
+//		assertEquals(check,googleMapsAPI.getChar(check));
+//		String message = "Hey",key = "tony";
+//		EncryptMessage em = new EncryptMessage(key,message);
+//		em.Encrypting();
+//		Decrypt.Decryption(key, OutputEncryptionPanel.getEcryptMessage());
+//		String afterDec = OutputDecryptionPanel.getOutput();
+//		System.out.println(message.equals(afterDec));
+//		assertTrue(message.equals(afterDec));
 	}
 
 }

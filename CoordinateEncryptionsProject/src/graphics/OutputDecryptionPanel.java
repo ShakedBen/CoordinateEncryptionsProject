@@ -10,7 +10,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 public class OutputDecryptionPanel extends JPanel {
-	private static JTextArea theOutput;
+	private static final JTextArea theOutput = new JTextArea();
 	public OutputDecryptionPanel(){
 		setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
@@ -23,7 +23,6 @@ public class OutputDecryptionPanel extends JPanel {
 //		c.gridy = 0;
 		JLabel messageInserting = new JLabel("Output:");
 		add(messageInserting,c);
-		theOutput = new JTextArea();
 		theOutput.setEditable(false);
 		theOutput.setLineWrap(true);
 		JScrollPane outputScrolling = new JScrollPane(theOutput);
@@ -39,4 +38,5 @@ public class OutputDecryptionPanel extends JPanel {
 		theOutput.setText(output);
 	}
 	public static void clearOutput(){theOutput.setText("");}
+	public static String getOutput(){return theOutput.getText();}
 }

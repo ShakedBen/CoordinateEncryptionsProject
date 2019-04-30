@@ -23,7 +23,7 @@ import org.json.simple.parser.ParseException;
 import Encryption.EncryptMessage;
 
 public class EncryptingPanel extends JPanel{
-	private static JTextArea theMessage;
+	private static final JTextArea theMessage = new JTextArea();
 	private static JTextField keyField;
 	public EncryptingPanel(){
 		setLayout(new GridBagLayout());
@@ -37,7 +37,6 @@ public class EncryptingPanel extends JPanel{
 		c.gridy = 0;
 		JLabel messageInserting = new JLabel("Insert Your Massage:");
 		add(messageInserting,c);
-		theMessage = new JTextArea();
 		theMessage.setLineWrap(true);
 		JScrollPane messageScrolling = new JScrollPane(theMessage);
 		c.gridy = 1;

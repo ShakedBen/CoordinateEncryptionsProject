@@ -21,7 +21,7 @@ import org.json.simple.parser.ParseException;
 import Encryption.Decrypt;
 
 public class DecryptingPanel extends JPanel {
-	private static JTextArea thecode;
+	private static final JTextArea thecode = new JTextArea();;
 	private static JTextField keyField;
 	public DecryptingPanel(){
 		setLayout(new GridBagLayout());
@@ -35,7 +35,6 @@ public class DecryptingPanel extends JPanel {
 		c.gridy = 0;
 		JLabel codeInserting = new JLabel("Insert Your Code:");
 		add(codeInserting,c);
-		thecode = new JTextArea();
 //		thecode.setLineWrap(true);
 		JScrollPane codeScrolling = new JScrollPane(thecode);
 		
